@@ -11,6 +11,7 @@ for (let button of buttons) {
     }
 }
 
+//flexcon prevents the holder from flaring its style all to the left and right
 const flexConTitle = document.createElement("div");
 flexConTitle.setAttribute("class","flexCon");
 contentDiv.appendChild(flexConTitle);

@@ -1,11 +1,11 @@
 import './style.css';
-import './home.js';
+// import './home.js';
 import './menu.js';
 import './contact.js';
 
 import pawImg from './imptStuff/paw.png';
 
-
+//paw stuff
 const paw1 = document.createElement("img");
 paw1.setAttribute("id","paw-1");
 paw1.src = pawImg;

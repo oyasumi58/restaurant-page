@@ -1,3 +1,4 @@
+/* general stuff + home */
 @font-face {
     font-family: 'Tagesschrift';
     src: url('imptStuff/Tagesschrift-Regular.woff2') format('woff2'),
@@ -15,6 +16,8 @@ body {
     padding: 0px;
     display: flex;
     flex-flow: column;
+    /* justify-content: space-between; */
+    height: 100vh;
     font-family: 'Tagesschrift',Arial, Helvetica, sans-serif;
 }
 
@@ -69,7 +72,7 @@ button.selected:hover {
     background:rgb(231, 211, 184);
     position: relative;
     display: flex;
-    flex-flow: column;
+    flex-flow: column;  
 }
 
 #content > div {
@@ -139,4 +142,11 @@ img {
     background: rgb(25, 24, 90);
     color: rgb(219, 219, 219);
     padding-left: 20px;
+    margin-top: auto;
+}
+
+/* contact */
+#contactTitle {
+    font-size: 3rem;
+    width: 10ch;
 }
