@@ -1,3 +1,6 @@
+function displayMenu() {
+
+
 const contentDiv = document.querySelector("#content");
 console.log(contentDiv);
 
@@ -119,3 +122,6 @@ menuItem6.appendEmoji("🍹");
 const menuItem7 = new menuItem("Coffee $3","Our signature!");
 menuItem7.apd(gridCon2);
 menuItem7.appendEmoji("☕");
+}
+
+export {displayMenu};

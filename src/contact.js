@@ -1,3 +1,4 @@
+function displayContact(jamesIMG,catIMG) {
 const contentDiv = document.querySelector("#content");
 console.log(contentDiv);
 
@@ -32,14 +33,13 @@ contentDiv.appendChild(flexConJames);
         contactJames.setAttribute("id","contact1");
         contactJames.innerHTML = "James(Owner) <br> No: 123-456-7890 <br> Email: james@cattiescafe.com";
         holderJames.appendChild(contactJames);
-        import jamesImg from "./imptStuff/james.svg"
+        // import jamesImg from "./imptStuff/james.svg"
+        let jamesImg = jamesIMG;
         const james = document.createElement("img");
         james.src = jamesImg;
         james.alt = "james";
         holderJames.appendChild(james);
-
-
-const flexConMilly = document.createElement("div");
+        const flexConMilly = document.createElement("div");
 flexConMilly.setAttribute("class","flexCon");
 contentDiv.appendChild(flexConMilly);
     const holderMilly = document.createElement("div");
@@ -49,15 +49,12 @@ contentDiv.appendChild(flexConMilly);
         contactMilly.setAttribute("id","contact1");
         contactMilly.innerHTML = "James(Owner) <br> No: 123-456-7890 <br> Email: james@cattiescafe.com";
         holderMilly.appendChild(contactMilly);
-        import catImg from "./imptStuff/cat.png"
+        // import catImg from "./imptStuff/cat.png"
+        let catImg = catIMG;
         const cat = document.createElement("img");
         cat.src = catImg;
         cat.alt = "cat";
         holderMilly.appendChild(cat);
+}
 
-// import catComImg from "./imptStuff/catCom.png";
-//         const catCom = document.createElement("img");
-//         catCom.setAttribute("id","catCom");
-//         catCom.src = catComImg;
-//         catCom.alt = "cat with computer";
-//         holderTitle.appendChild(catCom);
+export {displayContact};

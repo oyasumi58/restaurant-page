@@ -1,3 +1,4 @@
+function displayHome(catIMG,catComIMG) {
 const contentDiv = document.querySelector("#content");
 console.log(contentDiv);
 
@@ -22,7 +23,8 @@ contentDiv.appendChild(flexConTitle);
         resTitle.setAttribute("id","resTitle");
         resTitle.textContent = "Cattie's Cafe";
         holderTitle.appendChild(resTitle);
-        import catComImg from "./imptStuff/catCom.png";
+        // import catComImg from "./imptStuff/catCom.png";
+        let catComImg = catComIMG;
         const catCom = document.createElement("img");
         catCom.setAttribute("id","catCom");
         catCom.src = catComImg;
@@ -46,13 +48,18 @@ contentDiv.appendChild(flexConInfo);
     const holderInfo = document.createElement("div");
     holderInfo.setAttribute("class","holder");
     flexConInfo.appendChild(holderInfo);
-        const info = document.createElement("div");
-        info.setAttribute("id","info");
-        info.innerHTML = "Hours: 8am - 6pm EVERYDAY <br><br> Location: Coming to places near you!";
-        holderInfo.appendChild(info);
-        import catImg from "./imptStuff/cat.png";
+    // import catImg from "./imptStuff/cat.png";
+        let catImg = catIMG;
         const cat = document.createElement("img");
         cat.setAttribute("id","cat");
         cat.src = catImg;
         cat.alt = "cat";
-        holderInfo.appendChild(cat);
+        holderInfo.appendChild(cat);    
+        const info = document.createElement("div");
+        info.setAttribute("id","info");
+        info.innerHTML = "Hours: 8am - 6pm EVERYDAY <br><br> Location: Coming to places near you!";
+        holderInfo.appendChild(info);
+        
+}
+
+export {displayHome};
