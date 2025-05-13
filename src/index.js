@@ -11,26 +11,65 @@ import { displayMenu } from './menu';
 import { displayHome } from './home';
 import { displayContact } from './contact';
 
+displayHome(catImg,catComImg);
+
 let selectedTab = "home";
 
-if (selectedTab === "menu") {
-    displayMenu();
-} else if (selectedTab === "home") {
-    displayHome(catImg,catComImg);
-} else if (selectedTab === "contact") {
-    displayContact(jamesImg,catImg);
+const hb = document.querySelector("#home");
+const mb = document.querySelector("#menu");
+const cb = document.querySelector("#contact");
+
+function appendEvents() {
+    hb.addEventListener("click", () => {
+        if (selectedTab === "home") {
+            return;
+        }
+        displayTab("home");
+    })
+
+    mb.addEventListener("click", () => {
+        if (selectedTab === "menu") {
+            return;
+        }
+        displayTab("menu");
+    })
+
+    cb.addEventListener("click", () => {
+        if (selectedTab === "contact") {
+            return;
+        }
+        displayTab("contact");
+    })
+}
+appendEvents();
+
+function displayTab(tab) {
+    //remove display
+    const content = document.querySelector("#content");
+    while (content.lastChild) {
+        content.removeChild(content.lastChild);
+    }
+    //rid button sel functionality:
+    let prevSelButton = document.querySelector(".selected");
+    console.log(prevSelButton);
+    prevSelButton.removeEventListener("click",displayTab);
+    prevSelButton.classList.remove("selected");
+    //tab switch logic
+    if (tab === "menu") {
+        selectedTab = "menu";
+        displayMenu();
+    } else if (tab === "home") {
+            selectedTab = "home";
+        displayHome(catImg,catComImg);
+        
+    } else if (tab === "contact") {
+            selectedTab = "contact";
+        displayContact(jamesImg,catImg);
+    }
 }
 
 
-
-
-
-
-
-
-
-
-
+displayTab("home");
 
 //paw stuff
 const paw1 = document.createElement("img");
