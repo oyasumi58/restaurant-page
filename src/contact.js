@@ -1,4 +1,7 @@
-function displayContact(jamesIMG,catIMG) {
+import catImg from "./imptStuff/cat.png";
+import jamesImg from "./imptStuff/james.svg"
+
+function displayContact() {
 const contentDiv = document.querySelector("#content");
 //console.log(contentDiv);
 
@@ -34,7 +37,7 @@ contentDiv.appendChild(flexConJames);
         contactJames.innerHTML = "James(Owner) <br> No: 123-456-7890 <br> Email: james@cattiescafe.com";
         holderJames.appendChild(contactJames);
         // import jamesImg from "./imptStuff/james.svg"
-        let jamesImg = jamesIMG;
+        // let jamesImg = jamesIMG;
         const james = document.createElement("img");
         james.src = jamesImg;
         james.alt = "james";
@@ -50,7 +53,7 @@ contentDiv.appendChild(flexConMilly);
         contactMilly.innerHTML = "James(Owner) <br> No: 123-456-7890 <br> Email: james@cattiescafe.com";
         holderMilly.appendChild(contactMilly);
         // import catImg from "./imptStuff/cat.png"
-        let catImg = catIMG;
+        // let catImg = catIMG;
         const cat = document.createElement("img");
         cat.src = catImg;
         cat.alt = "cat";

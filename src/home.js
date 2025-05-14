@@ -1,4 +1,7 @@
-function displayHome(catIMG,catComIMG) {
+import catImg from "./imptStuff/cat.png";
+import catComImg from "./imptStuff/catCom.png";
+
+function displayHome() {
 const contentDiv = document.querySelector("#content");
 //console.log(contentDiv);
 
@@ -24,7 +27,7 @@ contentDiv.appendChild(flexConTitle);
         resTitle.textContent = "Cattie's Cafe";
         holderTitle.appendChild(resTitle);
         // import catComImg from "./imptStuff/catCom.png";
-        let catComImg = catComIMG;
+        // let catComImg = catComIMG;
         const catCom = document.createElement("img");
         catCom.setAttribute("id","catCom");
         catCom.src = catComImg;
@@ -49,7 +52,7 @@ contentDiv.appendChild(flexConInfo);
     holderInfo.setAttribute("class","holder");
     flexConInfo.appendChild(holderInfo);
     // import catImg from "./imptStuff/cat.png";
-        let catImg = catIMG;
+        // let catImg = catIMG;
         const cat = document.createElement("img");
         cat.setAttribute("id","cat");
         cat.src = catImg;

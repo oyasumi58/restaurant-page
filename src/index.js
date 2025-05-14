@@ -2,16 +2,17 @@ import './style.css';
 // import './home.js';
 // import './menu.js';
 // import './contact.js';
-import catImg from "./imptStuff/cat.png";
+// import catImg from "./imptStuff/cat.png";
+// import catComImg from "./imptStuff/catCom.png";
+// import jamesImg from "./imptStuff/james.svg"
 import pawImg from './imptStuff/paw.png';
-import catComImg from "./imptStuff/catCom.png";
-import jamesImg from "./imptStuff/james.svg"
+
 //tab switching logic:
 import { displayMenu } from './menu';
 import { displayHome } from './home';
 import { displayContact } from './contact';
 
-displayHome(catImg,catComImg);
+displayHome();
 
 let selectedTab = "home";
 
@@ -60,11 +61,11 @@ function displayTab(tab) {
         displayMenu();
     } else if (tab === "home") {
             selectedTab = "home";
-        displayHome(catImg,catComImg);
+        displayHome();
         
     } else if (tab === "contact") {
             selectedTab = "contact";
-        displayContact(jamesImg,catImg);
+        displayContact();
     }
 }
 
