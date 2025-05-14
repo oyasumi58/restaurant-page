@@ -2,14 +2,14 @@ function displayMenu() {
 
 
 const contentDiv = document.querySelector("#content");
-console.log(contentDiv);
+//console.log(contentDiv);
 
 const buttons = document.querySelectorAll(".tab");
-console.log(buttons);
+//console.log(buttons);
 for (let button of buttons) {
-    console.log(button.getAttribute("id"));
+    //console.log(button.getAttribute("id"));
     if (button.getAttribute("id") === "menu") {
-        console.log(button);
+        //console.log(button);
         button.classList.add("selected");
     }
 }
@@ -34,7 +34,7 @@ holder1.appendChild(menuTitle2);
 const gridCon = document.createElement("div");
 gridCon.setAttribute("id","gridCon");
 contentDiv.appendChild(gridCon);
-console.log(gridCon);
+//console.log(gridCon);
 
 
 class menuItem {

@@ -1,13 +1,13 @@
 function displayContact(jamesIMG,catIMG) {
 const contentDiv = document.querySelector("#content");
-console.log(contentDiv);
+//console.log(contentDiv);
 
 const buttons = document.querySelectorAll(".tab");
-console.log(buttons);
+//console.log(buttons);
 for (let button of buttons) {
-    console.log(button.getAttribute("id"));
+    //console.log(button.getAttribute("id"));
     if (button.getAttribute("id") === "contact") {
-        console.log(button);
+        //console.log(button);
         button.classList.add("selected");
     }
 }

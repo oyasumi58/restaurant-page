@@ -51,7 +51,7 @@ function displayTab(tab) {
     }
     //rid button sel functionality:
     let prevSelButton = document.querySelector(".selected");
-    console.log(prevSelButton);
+    //console.log(prevSelButton);
     prevSelButton.removeEventListener("click",displayTab);
     prevSelButton.classList.remove("selected");
     //tab switch logic
